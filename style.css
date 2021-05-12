@@ -65,10 +65,9 @@ table {
 }
 
 /* --------------------------------------------  Mobile Query Styles */
-
-@media all and (min-width: 375px) {
     body {
         background: rgba(0,0,0,0.1);
+        min-width: 375px;
     }
 
     body section {
@@ -138,12 +137,45 @@ table {
     body section > :nth-child(3) button {
         color: var(--very-dark-cyan);
     }
-}
 
 /* -------------------------------------  Desktop Query Styles */
 
 @media all and (min-width: 1440px) {
     body {
-        background: red;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    body section {
+       /* border: var(--debug); */
+       width: 60%;
+       display: flex;
+       flex-wrap: nowrap;
+       margin: 0;
+       position: relative;
+       top: 15rem;
+    }
+
+    body section article {
+        /* border: var(--debug); */
+        width: 20%;
+        padding: 0 4%;
+    }
+
+    body section :nth-child(1) {
+        border-radius: 10px 0 0 10px;
+    }
+
+    body section :nth-child(3) {
+        border-radius: 0 10px 10px 0;
+    }
+
+    body section article button {
+        /* position: relative; */
+        margin-top: 2.5rem; 
     }
 }
